@@ -18,7 +18,7 @@
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <1>;       // 300
     delay-ms = <0>;                   // 0
-    trigger-period-ms = <50>;
+    trigger-period-ms = <1>;
 };
 
 &mmv {

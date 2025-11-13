@@ -18,13 +18,13 @@
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <1>;       // 300
     delay-ms = <0>;                   // 0
-    trigger-period-ms = <1>;
+    trigger-period-ms = <16>;
 };
 
 &mmv {
-    time-to-max-speed-ms = <1>;
-    acceleration-exponent = <(-1)>;
-    trigger-period-ms = <1>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
 };
 
 &soft_off { hold-time-ms = <2000>; };
@@ -35,7 +35,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <50>;
+        tap-ms = <30>;
         label = "SCROLL_ENCODER";
     };
 

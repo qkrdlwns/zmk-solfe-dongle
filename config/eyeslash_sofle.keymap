@@ -16,12 +16,12 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
+    time-to-max-speed-ms = <1>;       // 300
     delay-ms = <0>;                   // 0
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <1>;
     acceleration-exponent = <1>;
     trigger-period-ms = <16>;
 };
@@ -35,7 +35,7 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <5>;
-        label = "mouse_scroll";
+        label = "SCROLL_ENCODER";
     };
 
     behaviors {

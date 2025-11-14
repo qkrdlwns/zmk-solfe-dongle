@@ -79,9 +79,9 @@
         layer_1 {
             bindings = <
 &kp F1          &kp F2         &kp F3        &kp F4          &kp F5            &kp F6      &mmv MOVE_UP     &kp F7           &kp F8      &kp F9    &kp F10    &kp F11               &kp F12
-&trans          &sk LEFT_GUI   &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &trans      &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
+&trans          &sk LEFT_GUI   &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &none       &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
 &trans          &mkp MB4       &mkp MB3      &mkp MB2        &mkp MB1          &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans          &kp RG(SPACE)  &kp K_CMENU   &kp SPACE       &kp ENTER         &trans      &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &trans    &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans          &kp RG(SPACE)  &kp K_CMENU   &kp SPACE       &kp ENTER         &none       &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &none     &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &mo 3            &trans      &trans    &trans     &trans
             >;
 
@@ -92,10 +92,10 @@
         layer_2 {
             bindings = <
 &kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18    &mmv MOVE_UP     &kp F19      &kp F20           &kp F21         &kp F22         &kp F23        &kp F24
-&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_DOWN   &trans       &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
+&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_DOWN   &none        &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
 &trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_LEFT   &kp C_PAUSE  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &kp LBRC       &kp RBRC
-&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_RIGHT  &trans       &trans            &trans          &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
-&trans   &trans   &trans   &trans   &trans   &trans     &mkp LCLK        &trans       &trans            &trans          &trans          &trans
+&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_RIGHT  &none        &none             &none           &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
+&none    &trans   &trans   &trans   &trans   &trans     &mkp LCLK        &trans       &trans            &trans          &trans          &trans
             >;
 
             display-name = "L2,SUBKEYS";

@@ -39,6 +39,15 @@
         label = "SCROLL_ENCODER";
     };
 
+    scroll_behavior_lr: scroll_behavior_lr {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+        tap-ms = <50>;
+        label = "SCROLL_BEHAVIOR_LR";
+    };
+
     behaviors {
     };
 
@@ -64,79 +73,46 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "L0";
+            display-name = "L0,MAIN";
         };
 
         layer_1 {
             bindings = <
 &kp F1          &kp F2         &kp F3        &kp F4          &kp F5            &kp F6      &mmv MOVE_UP     &kp F7           &kp F8      &kp F9    &kp F10    &kp F11               &kp F12
-&trans          &trans         &mkp LCLK     &mkp MCLK       &mkp RCLK         &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
-&trans          &sk LEFT_GUI   &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &kp RG(SPACE)  &kp K_CMENU   &kp SPACE       &kp ENTER         &trans      &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &trans    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp C_MUTE      &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &trans           &trans      &trans    &trans     &trans
+&trans          &sk LEFT_GUI   &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &trans      &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
+&trans          &mkp MB4       &mkp MB3      &mkp MB2        &mkp MB1          &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans          &kp RG(SPACE)  &kp K_CMENU   &kp SPACE       &kp ENTER         &trans      &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &trans    &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &mo 3            &trans      &trans    &trans     &trans
             >;
 
-            display-name = "L1";
+            display-name = "L1,MUS,ARR";
             sensor-bindings = <&scroll_encoder>;
         };
 
         layer_2 {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR     &mmv MOVE_UP     &trans  &trans        &trans          &trans          &trans         &trans
-&trans          &trans           &trans           &trans           &sys_reset    &bootloader    &mmv MOVE_DOWN   &trans  &kp CAPSLOCK  &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
-&trans          &out OUT_USB     &out OUT_BLE     &trans           &trans        &trans         &mmv MOVE_LEFT   &trans  &trans        &trans          &trans          &kp LBRC       &kp RBRC
-&trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans        &trans         &mmv MOVE_RIGHT  &trans  &trans        &trans          &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
-&trans          &trans           &trans           &trans           &trans        &trans         &mkp LCLK        &trans  &trans        &trans          &trans          &trans
+&kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18    &mmv MOVE_UP     &kp F19      &kp F20           &kp F21         &kp F22         &kp F23        &kp F24
+&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_DOWN   &trans       &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
+&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_LEFT   &kp C_PAUSE  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &kp LBRC       &kp RBRC
+&trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_RIGHT  &trans       &trans            &trans          &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
+&trans   &trans   &trans   &trans   &trans   &trans     &mkp LCLK        &trans       &trans            &trans          &trans          &trans
             >;
 
-            display-name = "L2";
-            sensor-bindings = <&scroll_encoder>;
+            display-name = "L2,SUBKEYS";
+            sensor-bindings = <&scroll_behavior_lr>;
         };
 
         layer_3 {
+            display-name = "L3,RGB,BIOS";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR      &mmv MOVE_UP     &trans       &trans            &trans          &trans          &trans         &trans
+&sys_reset      &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &out OUT_BLE    &mmv MOVE_DOWN   &trans       &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
+&bootloader     &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &out OUT_USB    &mmv MOVE_LEFT   &kp C_PAUSE  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &kp LBRC       &kp RBRC
+&trans          &rgb_ug RGB_TOG  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans          &mmv MOVE_RIGHT  &trans       &trans            &trans          &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
+&trans          &trans           &trans           &trans           &trans           &trans          &mkp LCLK        &trans       &trans            &trans          &trans          &trans
             >;
 
-            display-name = "layer3";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            display-name = "layer4";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
+            sensor-bindings = <&scroll_behavior_lr>;
         };
     };
 };

@@ -82,7 +82,7 @@
 &trans          &sk LEFT_GUI   &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &none       &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
 &trans          &mkp MB4       &mkp MB3      &mkp MB2        &mkp MB1          &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &trans          &kp RG(SPACE)  &kp K_CMENU   &kp SPACE       &kp ENTER         &none       &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &none     &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &mo 3            &trans      &trans    &trans     &trans
+&kt LEFT_SHIFT  &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &mo 3            &trans      &trans    &trans     &trans
             >;
 
             display-name = "L1,MUS,ARR";

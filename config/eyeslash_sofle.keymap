@@ -64,7 +64,8 @@
         repeat_scrl_right: repeat_scrl_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>;
+            bindings = <&macro_tap>, <&msc SCRL_RIGHT>;
+
             label = "REPEAT_SCRL_RIGHT";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -73,21 +74,24 @@
         repeat_scrl_left: repeat_scrl_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>;
+            bindings = <&macro_tap>, <&msc SCRL_LEFT>;
+
             label = "REPEAT_SCRL_LEFT";
         };
 
         repeat_scrl_up: repeat_scrl_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_UP>;
+            bindings = <&macro_tap>, <&msc SCRL_UP>;
+
             label = "REPEAT_SCRL_UP";
         };
 
         repeat_scrl_down: repeat_scrl_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>;
+            bindings = <&macro_tap>, <&msc SCRL_DOWN>;
+
             label = "REPEAT_SCRL_DOWN";
         };
     };

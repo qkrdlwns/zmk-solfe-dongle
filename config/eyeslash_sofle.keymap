@@ -69,11 +69,24 @@
 &kp TAB        &kp Q         &kp W         &kp F             &kp P   &kp B     &kp DOWN_ARROW   &kp J      &kp L      &kp U              &kp Y          &kp SEMICOLON  &kp BSLH
 &kp BACKSPACE  &kp A         &kp R         &kp S             &kp T   &kp G     &kp LEFT_ARROW   &kp M      &kp N      &kp E              &kp I          &kp O          &kp APOS
 &kp LSHFT      &kp X         &kp C         &kp D             &kp V   &kp Z     &kp RIGHT_ARROW  &kp K      &kp H      &kp COMMA          &kp DOT        &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 1   &mo 2     &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
+&kp C_MUTE     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 2   &mo 3     &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "ColemakDH";
+        };
+
+        QWERTY {
+            display-name = "QWERTY";
+            bindings = <
+&kp ESC        &kp N1        &kp N2        &kp N3            &kp N4  &kp N5    &kp UP_ARROW     &kp N6     &kp N7     &kp N8             &kp N9         &kp N0         &kp DELETE
+&kp TAB        &kp Q         &kp W         &kp E             &kp R   &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I              &kp O          &kp P          &kp BSLH
+&kp BACKSPACE  &kp A         &kp S         &kp D             &kp F   &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K              &kp L          &kp SEMI       &kp APOS
+&kp LSHFT      &kp Z         &kp X         &kp C             &kp V   &kp B     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA          &kp DOT        &kp FSLH       &kp RIGHT_SHIFT
+&kp C_MUTE     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 2   &mo 3     &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         MnA_etc {
@@ -82,7 +95,7 @@
 &trans          &sk LEFT_GUI   &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &none       &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
 &trans          &mkp MB4       &mkp MB3      &mkp MB2        &mkp MB1          &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &trans          &kp RG(SPACE)  &kp K_CMENU   &kp SPACE       &kp ENTER         &none       &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &none     &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kt LEFT_SHIFT  &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &mo 3            &trans      &trans    &trans     &trans
+&kt LEFT_SHIFT  &trans         &trans        &trans          &trans            &trans      &mkp LCLK        &trans           &trans      &trans    &trans     &trans
             >;
 
             display-name = "MnA_etc";
@@ -95,7 +108,7 @@
 &trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_DOWN   &none        &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
 &trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_LEFT   &kp C_PAUSE  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &kp LBRC       &kp RBRC
 &trans   &trans   &trans   &trans   &trans   &trans     &mmv MOVE_RIGHT  &none        &none             &none           &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
-&none    &trans   &trans   &trans   &trans   &trans     &mkp LCLK        &to 4        &to 0             &trans          &trans          &trans
+&none    &trans   &trans   &trans   &trans   &trans     &mkp LCLK        &tog 1       &trans            &trans          &trans          &trans
             >;
 
             display-name = "FnSpecials";
@@ -113,19 +126,6 @@
             >;
 
             sensor-bindings = <&scroll_behavior_lr>;
-        };
-
-        QWERTY {
-            display-name = "QWERTY";
-            bindings = <
-&kp ESC        &kp N1        &kp N2        &kp N3            &kp N4  &kp N5    &kp UP_ARROW     &kp N6     &kp N7     &kp N8             &kp N9         &kp N0         &kp DELETE
-&kp TAB        &kp Q         &kp W         &kp E             &kp R   &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I              &kp O          &kp P          &kp BSLH
-&kp BACKSPACE  &kp A         &kp S         &kp D             &kp F   &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K              &kp L          &kp SEMI       &kp APOS
-&kp LSHFT      &kp Z         &kp X         &kp C             &kp V   &kp B     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA          &kp DOT        &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 1   &mo 2     &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
     };
 };

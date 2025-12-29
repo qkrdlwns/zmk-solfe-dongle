@@ -108,7 +108,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN   &none      &mkp MB4        &mmv MOVE_UP    &mkp MB5         &none           &none
 &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none
 &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &none      &kp LC(C)       &kp LC(V)       &kp LC(Z)        &kp LEFT_SHIFT  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans           &mkp MCLK  &mkp LCLK       &mkp RCLK       &none            &none
+&trans  &trans  &trans  &trans  &trans  &trans    &none            &mkp MCLK  &mkp LCLK       &mkp RCLK       &none            &none
             >;
 
             label = "MKmode";
@@ -116,11 +116,11 @@
 
         FnSpecials {
             bindings = <
-&trans  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18    &mmv MOVE_UP     &kp F19      &kp F20           &kp F21         &kp F22         &kp F23        &kp F24
-&trans  &trans   &trans   &trans   &trans   &trans     &mmv MOVE_DOWN   &none        &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &kp UNDER      &kp PLUS
-&trans  &trans   &trans   &trans   &trans   &trans     &mmv MOVE_LEFT   &kp C_PAUSE  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &kp LBRC       &kp RBRC
-&trans  &trans   &trans   &trans   &trans   &trans     &mmv MOVE_RIGHT  &none        &none             &none           &kp TILDE       &kp LESS_THAN  &kp GREATER_THAN
-&none   &trans   &trans   &trans   &trans   &trans     &mkp LCLK        &tog 1       &trans            &trans          &trans          &trans
+&trans  &kp F13   &kp F14       &kp F15     &kp F16    &kp F17    &msc SCRL_UP     &kp F18  &kp F19           &kp F20         &kp F21         &kp F22  &kp PAUSE_BREAK
+&trans  &sk LGUI  &sk LEFT_ALT  &sk LSHIFT  &sk LCTRL  &trans     &msc SCRL_DOWN   &kp F23  &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &none    &none
+&trans  &trans    &trans        &trans      &trans     &trans     &msc SCRL_LEFT   &kp F24  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &none    &none
+&trans  &trans    &trans        &trans      &trans     &trans     &msc SCRL_RIGHT  &none    &none             &none           &none           &none    &none
+&none   &trans    &trans        &trans      &trans     &trans     &none            &tog 1   &mo 5             &trans          &trans          &trans
             >;
 
             display-name = "FnSpecials";
@@ -130,14 +130,74 @@
         BIOSnRGB {
             display-name = "BIOSnRGB";
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR      &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans  &trans
-&sys_reset      &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &out OUT_BLE    &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader     &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &out OUT_USB    &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &rgb_ug RGB_TOG  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans          &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans           &trans           &trans           &trans           &trans          &mkp LCLK        &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR      &none  &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset      &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &out OUT_BLE    &none  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader     &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &out OUT_USB    &none  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &rgb_ug RGB_TOG  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans          &none  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &trans           &trans           &trans           &trans          &none  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_behavior_lr>;
+        };
+
+        DUMMY1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        DUMMY2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        DUMMY3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        DUMMY4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        DUMMY5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        DUMMY6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };

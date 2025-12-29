@@ -14,7 +14,7 @@ manifest:
       revision: main 
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 5e60803023f53c15330368162f44482869501530
       import: app/west.yml
     - name: prospector-zmk-module                 # <--- and these
       remote: tokyo2006                          # <---

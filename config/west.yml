@@ -7,7 +7,7 @@ manifest:
     - name: tokyo2006
       url-base: https://github.com/tokyo2006
     - name: qkrdlwns
-      url-base: https://github.com/englmaxi
+      url-base: https://github.com/qkrdlwns
   projects:
     - name: mario-peripheral-animation
       remote: gpeye

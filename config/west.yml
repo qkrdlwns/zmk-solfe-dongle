@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/GPeye
     - name: tokyo2006
       url-base: https://github.com/tokyo2006
-    - name: qkrdlwns
-      url-base: https://github.com/qkrdlwns
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
   projects:
     - name: mario-peripheral-animation
       remote: gpeye
@@ -20,7 +20,7 @@ manifest:
       remote: tokyo2006                          # <---
       revision: micro_spi2  
     - name: zmk-dongle-display
-      remote: qkrdlwns
+      remote: englmaxi
       revision: main
   self:
     path: config

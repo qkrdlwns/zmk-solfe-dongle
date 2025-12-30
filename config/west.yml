@@ -11,16 +11,16 @@ manifest:
   projects:
     - name: mario-peripheral-animation
       remote: gpeye
-      revision: main 
+      revision: 1aa3950 
     - name: zmk
       remote: zmkfirmware
-      revision: 5138c6fb14783b756c5a3e61581625c700f3555b
+      revision: 5138c6f
       import: app/west.yml
     - name: prospector-zmk-module                 # <--- and these
       remote: tokyo2006                          # <---
       revision: micro_spi2  
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: main
+      revision: 4a76cc7
   self:
     path: config

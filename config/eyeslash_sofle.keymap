@@ -15,16 +15,17 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <1>;       // 300
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <300>;       // 300
     delay-ms = <0>;                   // 0
-    trigger-period-ms = <16>;
+    trigger-period-ms = <12>;
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <1200>;
     acceleration-exponent = <1>;
     trigger-period-ms = <16>;
+    delay-ms = <0>;
 };
 
 &soft_off { hold-time-ms = <2000>; };
@@ -35,7 +36,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <100>;
+        tap-ms = <20>;
         label = "SCROLL_ENCODER";
     };
 
@@ -44,7 +45,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-        tap-ms = <100>;
+        tap-ms = <20>;
         label = "SCROLL_BEHAVIOR_LR";
     };
 

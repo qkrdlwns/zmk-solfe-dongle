@@ -35,7 +35,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <50>;
+        tap-ms = <100>;
         label = "SCROLL_ENCODER";
     };
 
@@ -44,7 +44,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-        tap-ms = <50>;
+        tap-ms = <100>;
         label = "SCROLL_BEHAVIOR_LR";
     };
 
@@ -79,11 +79,11 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&kp ESC        &kp N1        &kp N2        &kp N3            &kp N4  &kp N5    &kp UP_ARROW     &kp N6     &kp N7     &kp N8             &kp N9         &kp N0         &kp DELETE
-&kp TAB        &kp Q         &kp W         &kp E             &kp R   &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I              &kp O          &kp P          &kp BSLH
-&kp BACKSPACE  &kp A         &kp S         &kp D             &kp F   &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K              &kp L          &kp SEMI       &kp APOS
-&kp LSHFT      &kp Z         &kp X         &kp C             &kp V   &kp B     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA          &kp DOT        &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 2   &mo 4     &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
+&kp ESC        &kp N1        &kp N2     &kp N3  &kp N4     &kp N5    &kp UP_ARROW     &kp N6     &kp N7     &kp N8             &kp N9         &kp N0         &kp DELETE
+&kp TAB        &kp Q         &kp W      &kp E   &kp R      &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I              &kp O          &kp P          &kp BSLH
+&kp BACKSPACE  &kp A         &kp S      &kp D   &kp F      &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K              &kp L          &kp SEMI       &kp APOS
+&kp LSHFT      &kp Z         &kp X      &kp C   &kp V      &kp B     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA          &kp DOT        &kp FSLH       &kp RIGHT_SHIFT
+&kp C_MUTE     &kp LEFT_ALT  &kp LCTRL  &mo 2   &kp SPACE  &mo 4     &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -119,7 +119,7 @@
 &trans  &kp F13   &kp F14       &kp F15     &kp F16    &kp F17    &msc SCRL_UP     &kp F18  &kp F19           &kp F20         &kp F21         &kp F22  &kp PAUSE_BREAK
 &trans  &sk LGUI  &sk LEFT_ALT  &sk LSHIFT  &sk LCTRL  &trans     &msc SCRL_DOWN   &kp F23  &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &none    &none
 &trans  &trans    &trans        &trans      &trans     &trans     &msc SCRL_LEFT   &kp F24  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp K_NEXT      &none    &none
-&trans  &tog 9    &tog 8        &tog 7      &tog 6     &trans     &msc SCRL_RIGHT  &none    &none             &none           &none           &none    &none
+&trans  &tog 9    &tog 8        &tog 8      &tog 7     &trans     &msc SCRL_RIGHT  &none    &none             &none           &none           &none    &none
 &none   &trans    &trans        &trans      &trans     &trans     &none            &tog 1   &mo 5             &trans          &trans          &trans
             >;
 
@@ -140,17 +140,17 @@
             sensor-bindings = <&scroll_behavior_lr>;
         };
 
-        ClipStudio {
+        ClipStudio1 {
             bindings = <
 &none   &none  &none  &none              &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none   &none  &none  &none              &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none   &none  &kp A  &kp K_APPLICATION  &kp S  &none    &none  &none  &none  &none  &none  &none  &none
 &none   &none  &none  &none              &none  &none    &none  &none  &none  &none  &none  &none  &none
-&tog 6  &none  &none  &none              &none  &none    &none  &none  &none  &none  &none  &none
+&tog 7  &none  &none  &none              &none  &none    &none  &none  &none  &none  &none  &none
             >;
         };
 
-        DUMMY2 {
+        ClipStudio2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -160,7 +160,7 @@
             >;
         };
 
-        DUMMY3 {
+        FLStudio1 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -170,7 +170,7 @@
             >;
         };
 
-        DUMMY4 {
+        FLStudio2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -191,6 +191,66 @@
         };
 
         DUMMY6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_12 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_13 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_14 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_15 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_16 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_17 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans

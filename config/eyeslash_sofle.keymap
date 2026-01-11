@@ -34,7 +34,7 @@
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        bindings = <&msc_for_encoder MOVE_UP>, <&msc_for_encoder MOVE_DOWN>;
 
         tap-ms = <20>;
         label = "SCROLL_ENCODER";
@@ -43,10 +43,22 @@
     scroll_behavior_lr: scroll_behavior_lr {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+        bindings = <&msc_for_encoder MOVE_LEFT>, <&msc_for_encoder MOVE_RIGHT>;
 
         tap-ms = <20>;
         label = "SCROLL_BEHAVIOR_LR";
+    };
+
+    msc_for_encoder: msc_for_encoder {
+        compatible = "zmk,behavior-input-two-axis";
+        label = "MSC_FOR_ENCODER";
+        #binding-cells = <1>;
+        x-input-code = <6>;
+        y-input-code = <8>;
+        time-to-max-speed-ms = <1>;
+        trigger-period-ms = <15>;
+        acceleration-exponent = <0>;
+        delay-ms = <0>;
     };
 
     behaviors {
@@ -95,7 +107,7 @@
 &trans  &kp F1        &kp F2        &kp F3             &kp F4            &kp F5            &mmv MOVE_UP     &kp F6           &kp F7     &kp F8         &kp F9     &kp F10               &kp INS
 &trans  &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT     &sk LEFT_CONTROL  &kt LEFT_SHIFT    &mmv MOVE_DOWN   &kp F11          &kp HOME   &kp UP         &kp END    &kp MINUS             &kp EQUAL
 &trans  &mkp MB4      &mkp MB3      &mkp MB2           &mkp MB1          &mkp MB5          &mmv MOVE_LEFT   &kp F12          &kp LEFT   &kp DOWN       &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans  &kp RETURN    &kp SPACE     &kp K_APPLICATION  &kp LANGUAGE_1    &mo 3             &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp PG_UP  &kp PAGE_DOWN  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans  &kp RETURN    &kp SPACE     &kp K_APPLICATION  &kp LANGUAGE_1    &tog 3            &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp PG_UP  &kp PAGE_DOWN  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &trans  &trans        &trans        &trans             &trans            &trans            &mkp LCLK        &trans           &trans     &trans         &trans     &trans
             >;
 

@@ -15,16 +15,16 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
+    acceleration-exponent = <2>;      // 0
     time-to-max-speed-ms = <300>;       // 300
     delay-ms = <0>;                   // 0
     trigger-period-ms = <12>;
 };
 
 &mmv {
-    time-to-max-speed-ms = <1200>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
+    time-to-max-speed-ms = <750>;
+    acceleration-exponent = <2>;
+    trigger-period-ms = <12>;
     delay-ms = <0>;
 };
 
@@ -132,7 +132,7 @@
 &trans  &kp F13   &kp F14       &kp F15     &kp F16    &kp F17    &msc SCRL_UP     &kp F18  &kp F19           &kp F20         &kp F21         &kp F22  &kp PAUSE_BREAK
 &trans  &sk LGUI  &sk LEFT_ALT  &sk LSHIFT  &sk LCTRL  &trans     &msc SCRL_DOWN   &kp F23  &kp CAPSLOCK      &kp SCROLLLOCK  &kp KP_NUMLOCK  &none    &none
 &trans  &trans    &trans        &trans      &trans     &trans     &msc SCRL_LEFT   &kp F24  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT      &none    &none
-&trans  &tog 12   &tog 10       &tog 8      &tog 6     &trans     &msc SCRL_RIGHT  &none    &none             &none           &none           &none    &none
+&trans  &tog 13   &tog 12       &tog 9      &tog 6     &trans     &msc SCRL_RIGHT  &none    &none             &none           &none           &none    &none
 &none   &trans    &trans        &trans      &trans     &trans     &none            &tog 1   &mo 5             &trans          &trans          &trans
             >;
 
@@ -173,7 +173,7 @@
             >;
         };
 
-        FLStudio1 {
+        ClipStudio3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -181,6 +181,19 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &tog 8  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+        };
+
+        FLStudio1 {
+            display-name = "QWERTY";
+            bindings = <
+&kp ESC        &kp N1        &kp N2     &kp N3  &kp N4     &kp N5    &kp UP_ARROW     &kp N6     &kp N7     &kp N8             &kp N9         &kp N0         &kp DELETE
+&kp TAB        &kp Q         &kp W      &kp E   &kp R      &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I              &kp O          &kp P          &kp BSLH
+&kp BACKSPACE  &kp A         &kp S      &kp D   &kp F      &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K              &kp L          &kp SEMI       &kp APOS
+&kp LSHFT      &kp Z         &kp X      &kp C   &kp V      &kp B     &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA          &kp DOT        &kp FSLH       &kp RIGHT_SHIFT
+&tog 9         &kp LEFT_ALT  &kp LCTRL  &mo 10  &kp SPACE  &mo 11    &kp ENTER        &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_ALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         FLStudio2 {
@@ -193,17 +206,7 @@
             >;
         };
 
-        AAA1 {
-            bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&tog 10  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        AAA2 {
+        FLStudio3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -213,7 +216,7 @@
             >;
         };
 
-        BBB1 {
+        Main3 {
             bindings = <
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -223,7 +226,7 @@
             >;
         };
 
-        BBB2 {
+        Main4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -244,26 +247,6 @@
         };
 
         layer_15 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_16 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_17 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans

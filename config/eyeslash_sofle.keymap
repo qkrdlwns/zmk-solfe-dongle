@@ -56,7 +56,7 @@
         x-input-code = <6>;
         y-input-code = <8>;
         time-to-max-speed-ms = <1>;
-        trigger-period-ms = <15>;
+        trigger-period-ms = <1>;
         acceleration-exponent = <0>;
         delay-ms = <0>;
     };
